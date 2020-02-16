@@ -1,0 +1,12 @@
+#nodejs.service
+[Unit]
+Description=LTPS NodeJS Test Application
+After=network-online.target
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/opt/node-apps/demo0/site/
+ExecStart=/usr/local/bin/node /opt/node-apps/demo0/site/node.js
+
+[Install]
+WantedBy=multi-user.target

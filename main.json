@@ -1,0 +1,7 @@
+{
+  "type": "googlecompute-import",
+  "account_file": "account.json",
+  "project_id": "my-project",
+  "bucket": "my-bucket",
+  "image_name": "my-gce-image"
+}

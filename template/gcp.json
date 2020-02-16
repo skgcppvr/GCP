@@ -1,0 +1,30 @@
+{
+"builders": [
+    {
+      "type": "googlecompute",
+      "account_file": "account.json",
+      "project_id": "skpvr-267211",
+      "source_image": "centos-8-v20200205",
+      "ssh_username": "packer",
+      "zone": "europe-west1-b"
+    }
+  ],
+"provisioners": [
+    {
+      "type": "file",
+      "source": "files/node.js",
+      "destination": "/tmp/node.js"
+    },
+    {
+      "type": "file",
+      "source": "files/nodejs.service",
+      "destination" : "/tmp/nodejs.service"
+    },
+ {
+      "type": "shell",
+      "scripts": [
+        "scripts/setup_nodejs.sh"
+
+      ]
+    }]
+}
