@@ -11,7 +11,7 @@ resource "google_compute_instance" "app" {
 
   boot_disk {
       initialize_params {
-        image = "packer-1581856648"
+        image = "packer-1583410846"
   }
   }
 
